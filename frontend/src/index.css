@@ -12,6 +12,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
   color: var(--color-brand-blue);
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* Typography specifics based on reference */

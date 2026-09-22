@@ -18,11 +18,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
         
         {/* Header */}
-        <div className="mb-12 text-left md:text-center md:flex md:flex-col md:items-center">
+        <div className="mb-10 lg:mb-12 text-left md:text-center md:flex md:flex-col md:items-center">
           <div className="flex items-center space-x-4 mb-2">
             <span className="text-brand-gold font-medium tracking-widest text-xs uppercase hidden md:block">GET IN TOUCH</span>
             <div className="h-[1px] w-8 bg-brand-gold hidden md:block"></div>
@@ -60,9 +60,9 @@ const Contact = () => {
               <p className="text-gray-500 text-sm">+91 9688420077</p>
             </div>
 
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 flex-wrap">
               <div className="text-brand-gold text-xl"><FaEnvelope /></div>
-              <p className="text-gray-500 text-sm">stfrancisxavierchurch@gmail.com</p>
+              <p className="text-gray-500 text-sm break-all">stfrancisxavierchurch@gmail.com</p>
             </div>
 
             <div className="flex items-start space-x-4 pt-2">
@@ -75,7 +75,7 @@ const Contact = () => {
           </div>
 
           {/* Col 2: Contact Form */}
-          <div>
+          <div className="w-full">
              <form onSubmit={handleSubmit} className="space-y-4">
                 {isSubmitted && (
                   <div className="bg-green-50 border border-green-200 text-green-600 p-3 rounded text-sm mb-4">
@@ -88,7 +88,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:border-brand-gold transition-colors text-sm"
+                  className="w-full px-4 py-3 rounded border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:border-brand-gold transition-colors text-base md:text-sm"
                   placeholder="Full Name"
                 />
                 <input 
@@ -97,7 +97,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:border-brand-gold transition-colors text-sm"
+                  className="w-full px-4 py-3 rounded border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:border-brand-gold transition-colors text-base md:text-sm"
                   placeholder="Email Address"
                 />
                 <input 
@@ -105,7 +105,7 @@ const Contact = () => {
                   name="phone" 
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:border-brand-gold transition-colors text-sm"
+                  className="w-full px-4 py-3 rounded border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:border-brand-gold transition-colors text-base md:text-sm"
                   placeholder="Phone Number"
                 />
                 <textarea 
@@ -114,7 +114,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="3"
-                  className="w-full px-4 py-3 rounded border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:border-brand-gold transition-colors resize-none text-sm"
+                  className="w-full px-4 py-3 rounded border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:border-brand-gold transition-colors resize-none text-base md:text-sm"
                   placeholder="Message"
                 ></textarea>
                 

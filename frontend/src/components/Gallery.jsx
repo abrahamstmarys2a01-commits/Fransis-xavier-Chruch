@@ -48,11 +48,11 @@ const Gallery = () => {
   };
 
   return (
-    <section id="gallery" className="py-24 bg-brand-ivory">
-      <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
+    <section id="gallery" className="py-16 lg:py-24 bg-brand-ivory">
+      <div className="container mx-auto px-4 lg:px-12 max-w-6xl overflow-x-hidden">
         
         {/* Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-8 lg:mb-10">
           <div className="flex items-center justify-center space-x-4 mb-3">
             <div className="h-[1px] w-8 bg-brand-gold"></div>
             <span className="text-brand-gold font-medium tracking-widest text-xs uppercase">OUR GALLERY</span>
@@ -63,18 +63,18 @@ const Gallery = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-brand-blue font-serif mb-8"
+            className="text-3xl md:text-4xl font-bold text-brand-blue font-serif mb-6 lg:mb-8"
           >
             Church Gallery
           </motion.h2>
           
           {/* Pill Filter Menu */}
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
+          <div className="flex overflow-x-auto md:flex-wrap justify-start md:justify-center gap-2 mb-8 lg:mb-12 pb-2 hide-scrollbar snap-x snap-mandatory px-2 md:px-0" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveTab(cat)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`snap-center whitespace-nowrap px-5 sm:px-6 py-2 rounded-full text-sm font-medium transition-colors flex-shrink-0 ${
                   activeTab === cat 
                     ? 'bg-brand-blue text-white shadow-md' 
                     : 'bg-white text-gray-500 hover:bg-gray-100 border border-gray-200'
