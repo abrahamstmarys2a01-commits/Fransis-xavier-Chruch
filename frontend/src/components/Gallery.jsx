@@ -21,6 +21,8 @@ const Gallery = () => {
     { src: '/media_1790057113839.jpg', category: 'Church', alt: 'Church Flagpole Night' },
     { src: '/media_1790058569214.png', category: 'Church', alt: 'Church Interior Altar' },
     { src: '/media_1790058584215.png', category: 'Events', alt: 'Church Mass' },
+    { src: '/media_1790067063499.jpg', category: 'Events', alt: 'Church Event Outside' },
+    { src: '/media_1790067055341.jpg', category: 'Events', alt: 'Church Event Inside' },
   ];
 
   const filteredImages = activeTab === 'All' 
